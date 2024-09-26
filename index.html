@@ -136,9 +136,16 @@
         .popup .close:hover {
             background: #bbb;
         }
-        .button2, .button3 {
-            padding: 10px 20px;
-        }
+       .button2, .button3 {
+    padding: 10px 20px;
+    background-color: transparent; /* Make the background transparent */
+    border: none; /* Optional: remove any borders */
+    color: inherit; /* Optional: use the current text color */
+    cursor: pointer; /* Optional: change the cursor to pointer on hover */
+}
+        .button2:hover, .button3:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Light transparent background on hover */
+}
         * {
       margin: 0;
       padding: 0;
@@ -415,6 +422,7 @@ Additional Skills: Photo and video editing, virtual machines, graphics creation 
 <p>Math Solving: MATLAB, Mathematica</p>
 <p>Photo and Video Editing: Filmora-9, Adobe Lightroom, iMovie</p>
 <p>Web Hosting: Ubuntu Server, GitHub</p>
+        <p>Click to see certificates</p>
  <button class="button2" onclick="openPopup('popup1')">
         <img src="https://i.pinimg.com/564x/fa/b1/ee/fab1ee1d321b37b6fadfd4dc37a60e04.jpg" style="width: 50px; height: auto;">
         <p>Solid Works certificate</p> 
