@@ -54,22 +54,14 @@
             max-width: 600px;
         }
      /* Button Base Styles */
-.email-button, .whatsapp {    background: linear-gradient(90deg, #4CAF50, #45a049);
-    border: none;
-    border-radius: 8px; /* Slightly larger radius for a softer look */
-    color: white;
-    padding: 14px 28px; /* Increased padding for better touch area */
-    font-size: 16px;
-    font-weight: bold; /* Make text bold for emphasis */
-    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added shadow transition */
-    display: flex; /* Use flexbox to center icon and text */
-    align-items: center; /* Center items vertically */
-    justify-content: center; /* Center items horizontally */
-    margin: 10px 0;
-    text-decoration: none; /* Remove underline for anchor tags */
+       .button-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: center; /* Center buttons horizontally */
+    align-items: center; /* Center buttons vertically */
+    margin: 20px 0; /* Optional: add some margin for spacing */
 }
-.Linkedin, .Youtube {
-    position: relative; /* Needed for positioning */
+     /* Button Base Styles */
+.email-button, .whatsapp, .Linkedin, .Youtube {
     background: linear-gradient(90deg, #4CAF50, #45a049);
     border: none;
     border-radius: 8px; /* Slightly larger radius for a softer look */
@@ -81,11 +73,13 @@
     display: flex; /* Use flexbox to center icon and text */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
-    text-decoration: none;
-    margin: 10px 0;/* Add some margin between buttons */
-    animation: glow 1.5s infinite alternate; /* Add glow animation */
+    margin: 0 10px; /* Add some margin between buttons */
+    text-decoration: none; /* Remove underline for anchor tags */
 }
 
+.Linkedin, .Youtube {
+    animation: glow 1.5s infinite alternate; /* Add glow animation */
+}
 @keyframes glow {
     0% {
         box-shadow: 0 0 5px rgba(76, 175, 80, 0.7), 0 0 10px rgba(76, 175, 80, 0.7), 0 0 15px rgba(76, 175, 80, 0.7);
@@ -279,13 +273,20 @@
         <div class="details">
 <h1>Ubaid UR Rehman</h1>
 <p>Mechanical Engineer and Hobby as Space Engineer and also web and devolper</p>
+            <div class="button-container">
  <a href="https://wa.me/923116522978" target="_blank" class="btn whatsapp">WhatsApp Me</a>
  
  <a href="mailto:urubaid205@gmail.com" class="email-button">Email Me</a>
+                
+</div>
+
+                <div class="button-container">
 <a href="https://www.linkedin.com/in/ubaid-ur-rehman-0bba01283/" target="_blank" class="btn Linkedin">Linkedin</a>
 
 
   <a href=" https://www.youtube.com/@ur_frequency/" class="YouTube">Visit Youtube Channel</a>
+
+</div>
 
 </div>
 </div>
