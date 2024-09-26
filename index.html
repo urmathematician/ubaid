@@ -1,3 +1,4 @@
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -33,71 +34,78 @@
             margin: 10px 0 0;
             font-size: 16px;
         }
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            margin: 20px;
-        }
-
+.container {
+    background-color: #F9F9F9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+}
         .container img {
             max-width: 300px;
             height: auto;
+             box-shadow: 0 2px 5px rgba(0,200,0,0.9);
             margin-right: 20px;
         }
 
         .container .details {
             max-width: 600px;
         }
-         .email-button {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer;
-        }
-        .whatsapp {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer
-        }
+     /* Button Base Styles */
+.email-button, .whatsapp {    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border: none;
+    border-radius: 8px; /* Slightly larger radius for a softer look */
+    color: white;
+    padding: 14px 28px; /* Increased padding for better touch area */
+    font-size: 16px;
+    font-weight: bold; /* Make text bold for emphasis */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added shadow transition */
+    display: flex; /* Use flexbox to center icon and text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-decoration: none; /* Remove underline for anchor tags */
+}
+.Linkedin, .Youtube {
+    position: relative; /* Needed for positioning */
+    background: linear-gradient(90deg, #4CAF50, #45a049);
+    border: none;
+    border-radius: 8px; /* Slightly larger radius for a softer look */
+    color: white;
+    padding: 14px 28px; /* Increased padding for better touch area */
+    font-size: 16px;
+    font-weight: bold; /* Make text bold for emphasis */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Added shadow transition */
+    display: flex; /* Use flexbox to center icon and text */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    text-decoration: none;
+    margin: 10px; /* Add some margin between buttons */
+    animation: glow 1.5s infinite alternate; /* Add glow animation */
+}
 
-        .Linkedin {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer
-        }
-        .Youtube {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 5px;
-            border: none;
-            cursor: pointer
-        }
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(76, 175, 80, 0.7), 0 0 10px rgba(76, 175, 80, 0.7), 0 0 15px rgba(76, 175, 80, 0.7);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(76, 175, 80, 1), 0 0 30px rgba(76, 175, 80, 1), 0 0 45px rgba(76, 175, 80, 1);
+    }
+}
+
+
+/* Adding Icon Styles */
+.email-button i, .whatsapp i, .Linkedin i, .Youtube i {
+    margin-right: 8px; /* Space between icon and text */
+}
+
+/* Hover Effects */
+.email-button:hover, .whatsapp:hover, .Linkedin:hover, .Youtube:hover {
+    background: linear-gradient(90deg, #45a049, #4CAF50);
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
         .popup {
             display: none;
             position: fixed;
@@ -143,14 +151,13 @@
     }
 
     .header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 20px;
-      background-color: #000; /* Changed to black */
-      color: #fff;
-      position: relative;
-    }
+    background-color: #1E1E1E;
+    color: #FFFFFF;
+    padding: 20px 40px;
+    border-bottom: 2px solid #4CAF50;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
 
     .logo {
       display: flex;
@@ -225,16 +232,32 @@
         display: block;
       }
     }
-          .text-container {
+         .text-container {
             padding-left: 50px;
             padding-right: 50px;
+            background-color: #ffffff; /* White background */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+            margin: 20px 0; /* Margin above and below */
+            max-width: 800px; /* Maximum width */
+            text-align: center; /* Center text */
+        }
+
+        .text-container p {
+            color: #333; /* Dark text color */
+            font-size: 18px; /* Larger text size */
+            line-height: 1.6; /* Better line spacing */
+            margin: 10px 0; /* Margin for spacing between paragraphs */
         }
                  h2 {
-            background-color: green; /* Green header bar */
+            background: linear-gradient(90deg, #4CAF50, #45a049); /* Gradient header */
             color: white;
-            padding: 15px;           /* Padding around the heading */
-            
-             
+            padding: 15px; /* Padding around the heading */
+            border-radius: 8px; /* Rounded corners */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            width: 100%; /* Full width */
+            text-align: center; /* Center the text */
+            margin-bottom: 20px; /* Space below the header */ 
          }
                      h3 {
             background-color: red; /* Green header bar */
@@ -256,10 +279,11 @@
 <h1>Ubaid UR Rehman</h1>
 <p>Mechanical Engineer and Hobby as Space Engineer and also web and devolper</p>
  <a href="https://wa.me/923116522978" target="_blank" class="btn whatsapp">WhatsApp Me</a>
+ 
+ <a href="mailto:urubaid205@gmail.com" class="email-button">Email Me</a>
 <a href="https://www.linkedin.com/in/ubaid-ur-rehman-0bba01283/" target="_blank" class="btn Linkedin">Linkedin</a>
 
 
- <a href="mailto:urubaid205@gmail.com" class="email-button">Email Me</a>
   <a href=" https://www.youtube.com/@ur_frequency/" class="YouTube">Visit Youtube Channel</a>
 
 </div>
@@ -349,14 +373,6 @@ Additional Skills: Photo and video editing, virtual machines, graphics creation 
 <p>Operating Systems: Windows (XP, 10, 11), Mac (High Sierra, Mojave, Catalina, Sonoma), Linux (Mint, Ubuntu, Ubuntu Server)
 </p>
 <p>Drafting Tools: AutoCAD, SolidWorks</p>
- <button class="button2" onclick="openPopup('popup1')">
-        <img src="https://i.pinimg.com/564x/fa/b1/ee/fab1ee1d321b37b6fadfd4dc37a60e04.jpg" style="width: 50px; height: auto;">
-    </button>
-
-    <div class="popup" id="popup1">
-        <button class="close" onclick="closePopup('popup1')">×</button>
-        <iframe src="https://drive.google.com/file/d/1wHM8vl1ZoO3FLUDyRlxlSfoQ_zsPJ20t/preview" frameborder="0"></iframe>
-    </div>
 
 </div>
     <div class="text-container">
@@ -365,14 +381,7 @@ Additional Skills: Photo and video editing, virtual machines, graphics creation 
 <p>Microcontroller Programming: Arduino IDE</p>
 <p>Simulation Tools: Ansys (Products)</p>
 
-    <button class="button3" onclick="openPopup('popup2')">
-        <img src="https://i.pinimg.com/564x/34/00/b8/3400b8a36bff2eac6304fb074433e11b.jpg" style="width: 100px; height: 50px;">
-    </button>
-
-    <div class="popup" id="popup2">
-        <button class="close" onclick="closePopup('popup2')">×</button>
-        <iframe src="https://drive.google.com/file/d/1ni9g-ytGrpg6PKQ6JPsBCs1rMRWiaYil/preview" frameborder="0"></iframe>
-    </div>
+  
 <p>CNC and PLC Tools: Fusion 360, MasterCAM, CNC-Simulator,LD-Micro, PLC Simulators.
 </p>
 <p>Coding Tools: PyCharm.
@@ -380,6 +389,26 @@ Additional Skills: Photo and video editing, virtual machines, graphics creation 
 <p>Math Solving: MATLAB, Mathematica</p>
 <p>Photo and Video Editing: Filmora-9, Adobe Lightroom, iMovie</p>
 <p>Web Hosting: Ubuntu Server, GitHub</p>
+ <button class="button2" onclick="openPopup('popup1')">
+        <img src="https://i.pinimg.com/564x/fa/b1/ee/fab1ee1d321b37b6fadfd4dc37a60e04.jpg" style="width: 50px; height: auto;">
+        <p>Solid Works certificate</p> 
+    </button>
+
+    <div class="popup" id="popup1">
+        <button class="close" onclick="closePopup('popup1')">×</button>
+        <iframe src="https://drive.google.com/file/d/1wHM8vl1ZoO3FLUDyRlxlSfoQ_zsPJ20t/preview" frameborder="0"></iframe>
+        
+    </div>
+  <button class="button3" onclick="openPopup('popup2')">
+        <img src="https://i.pinimg.com/564x/34/00/b8/3400b8a36bff2eac6304fb074433e11b.jpg" style="width: 100px; height: 50px;">
+        <p>Ansys Certificate</p> 
+    </button>
+
+    <div class="popup" id="popup2">
+        <button class="close" onclick="closePopup('popup2')">×</button>
+        <iframe src="https://drive.google.com/file/d/1ni9g-ytGrpg6PKQ6JPsBCs1rMRWiaYil/preview" frameborder="0"></iframe>
+    </div>
+
 <h2>My Web Pages</h2>
  <div class="card-container">
         <div class="card" onclick="window.open('https://urmathematician.github.io/ur_frequency/', '_blank')">
